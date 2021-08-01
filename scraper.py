@@ -29,8 +29,10 @@ driver.implicitly_wait(2)
 select = Select(driver.find_element_by_class_name("field-input--compact"))
 select.select_by_visible_text("newest to oldest")
 time.sleep(2)
+
 flag  = False
 pagenum = 1
+
 # Loop for pages
 print("Extracting Reviews...")
 while True:
@@ -62,18 +64,16 @@ while True:
         except: 
             # Filling it witn NaN
             review_title= None
-
         # Description
         review_desc = review.find_element_by_class_name("review-text").text
         df.loc[len(df.index)] = [date_in_num,reviewer_name,review_title,review_desc,rating,review_verified]
 
     if flag:
          break
-    #myElem = WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.CLASS_NAME, 'paginator-btn-next')))
     driver.find_element_by_class_name("paginator-btn-next").click()
     pagenum+=1
 
-time.sleep(10)
 driver.quit()
 print("Saving reviews")
 df.to_csv("output.csv")
+print("Done")
