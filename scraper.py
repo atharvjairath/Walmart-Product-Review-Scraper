@@ -15,6 +15,8 @@ df = pd.DataFrame(columns = ['Date', 'Reviewer_Name', 'Review_title', 'Review_de
 options = webdriver.ChromeOptions()
 options.add_experimental_option('excludeSwitches', ['enable-logging'])
 driver = webdriver.Chrome('C:\chromedriver.exe',options=options)
+# Maximizing the Window to reduce the change of bot detection
+driver.maximize_window()
 
 # Opens the Walmart Product Link
 driver.get('https://www.walmart.com/ip/Clorox-Disinfecting-Wipes-225-Count-Value-Pack-Crisp-Lemon-and-Fresh-Scent-3-Pack-75-Count-Each/14898365')
