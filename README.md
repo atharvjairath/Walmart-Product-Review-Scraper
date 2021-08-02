@@ -20,16 +20,17 @@ It scrapes the product review data from Walmart Website using Selenium.
 ## Problem Faced 
 1. The date was in string format for example *May 13, 2021*.
 > To make the date in clean format. I used [dateutil](https://dateutil.readthedocs.io/en/stable/) to parse the date into required format.
-
-2. Walmart also has a bot detection, which we need to take care of. To reduce the chance of bot detection we can implement some tricks such as:
-> 1. Increasing the size of our driver window
-```
-
-```
-	
-~~~~
+~~~~py
  date_in_num = parse(review.find_element_by_class_name("review-date-submissionTime").get_attribute("content"))
 ~~~~
+
+2. Walmart also has a bot detection, which we need to take care of. To reduce the chance of bot detection we can implement some tricks such as:
+> 1. Increasing the size of our driver window.
+```python
+driver.maximize_window()
+```
+
+
 
 
 ## What's next?
