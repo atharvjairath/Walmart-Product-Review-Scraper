@@ -44,8 +44,8 @@ driver.maximize_window()
 
 
 ## Resources Used
-1. [Selenium Docs](https://www.selenium.dev/documentation/en/)
-2. [How to avoid bot Detection](http://php8legs.com/en/php-web-scraper/51-how-to-avoid-selenium-webdriver-from-being-detected-as-bot-or-web-spider)
+* [Selenium Docs](https://www.selenium.dev/documentation/en/)
+* [How to avoid bot Detection](http://php8legs.com/en/php-web-scraper/51-how-to-avoid-selenium-webdriver-from-being-detected-as-bot-or-web-spider)
 
 ## Author
 
